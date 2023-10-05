@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">taxiApp</string>
+    <string name="driverBtn">I am a driver</string>
+    <string name="customerBtn">I am a customer</string>
+</resources>
