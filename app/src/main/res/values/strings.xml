@@ -2,4 +2,11 @@
     <string name="app_name">taxiApp</string>
     <string name="driverBtn">I am a driver</string>
     <string name="customerBtn">I am a customer</string>
+    <string name="email">abc@mail.pl</string>
+    <string name="pass">enter your password</string>
+    <string name="signIn">Log in</string>
+    <string name="signUp">Sign in</string>
+    <string name="driverStatus">Log in for drivers</string>
+    <string name="createQuestion">You don`t have account</string>
+
 </resources>

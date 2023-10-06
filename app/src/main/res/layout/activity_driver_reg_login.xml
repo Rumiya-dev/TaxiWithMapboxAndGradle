@@ -1,9 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DriverRegLoginActivity">
+    android:background="@drawable/welcome"
+    tools:context="DriverRegLoginActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/driverEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/statusDriver"
+        android:ems="10"
+        android:layout_marginTop="30dp"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/driverPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/driverEmail"
+        android:layout_marginTop="30dp"
+        android:hint="@string/pass"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/signInDriver"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@color/green"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:textColor="@color/black"
+        android:text="@string/signIn"
+        android:layout_below="@id/driverPassword"
+        android:layout_marginTop="30dp"
+        android:layout_centerInParent="true"/>
+
+    <Button
+        android:id="@+id/signUpDriver"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@color/red"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:text="@string/signUp"
+        android:layout_below="@id/signInDriver"
+        android:layout_marginTop="30dp"
+        android:layout_centerInParent="true"
+        />
+
+    <TextView
+        android:id="@+id/statusDriver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:text="@string/driverStatus" />
+
+    <TextView
+        android:id="@+id/accountCreate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/signInDriver"
+        android:layout_marginTop="5dp"
+        android:text="@string/createQuestion" />
+</RelativeLayout>

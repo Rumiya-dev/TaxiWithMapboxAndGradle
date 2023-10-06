@@ -25,5 +25,13 @@ public class WelcomeActivity2 extends AppCompatActivity {
                 startActivity(driverIntent);
             }
         });
+
+        customerBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent customerIntent = new Intent(WelcomeActivity2.this, CustomerRegLoginActivity.class);
+                startActivity(customerIntent);
+            }
+        });
     }
 }
