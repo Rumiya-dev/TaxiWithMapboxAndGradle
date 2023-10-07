@@ -66,10 +66,42 @@ public class DriverRegLoginActivity extends AppCompatActivity {
 
             }
         });
+
+        signInBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                String email = emailET.getText().toString();//preobrazovanie vvedennogo email v strochku string
+                String password = passwordET.getText().toString();//preobrazovanie vvedennogo parolya v strochku string
+
+                SignInDriver(email, password);
+            }
+        });
     }
 
+    private void SignInDriver(String email, String password)
+    {
+        loadingBar.setTitle("Driver account login");
+        loadingBar.setMessage("Please wait loading");
+        loadingBar.show();
+        mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()) {
+                    Toast.makeText(DriverRegLoginActivity.this, "Login completed successfully", Toast.LENGTH_SHORT).show();
+                    loadingBar.dismiss();
+                } else {
+                    Toast.makeText(DriverRegLoginActivity.this, "Error, try again", Toast.LENGTH_SHORT).show();
+                    loadingBar.dismiss();
+                }
+            }
+        });
+    }
+
+
+
     private void RegisterDriver(String email, String password){
-        loadingBar.setTitle("User registration");
+        loadingBar.setTitle("Driver registration");
         loadingBar.setMessage("Please wait loading");
         loadingBar.show();
       mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {

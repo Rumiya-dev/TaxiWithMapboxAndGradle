@@ -71,6 +71,35 @@ public class CustomerRegLoginActivity extends AppCompatActivity {
 
             }
         });
+
+        signInBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String email = emailET.getText().toString();//preobrazovanie vvedennogo email v strochku string
+                String password = passwordET.getText().toString();//preobrazovanie vvedennogo parolya v strochku string
+
+                SignInCustomer(email, password);
+            }
+        });
+    }
+
+    private void SignInCustomer(String email, String password)
+    {
+        loadingBar.setTitle("Customer account login");
+        loadingBar.setMessage("Please wait loading");
+        loadingBar.show();
+        mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()) {
+                    Toast.makeText(CustomerRegLoginActivity.this, "Login completed successfully", Toast.LENGTH_SHORT).show();
+                    loadingBar.dismiss();
+                } else {
+                    Toast.makeText(CustomerRegLoginActivity.this, "Error, try again", Toast.LENGTH_SHORT).show();
+                    loadingBar.dismiss();
+                }
+            }
+        });
     }
 
     private void RegisterCustomer(String email, String password) {
