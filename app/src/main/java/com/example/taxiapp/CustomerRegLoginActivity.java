@@ -113,6 +113,10 @@ public class CustomerRegLoginActivity extends AppCompatActivity {
                 if (task.isSuccessful()) {
                     Toast.makeText(CustomerRegLoginActivity.this, "Registration completed successfully", Toast.LENGTH_SHORT).show();
                     loadingBar.dismiss();
+
+                    //Intent driverIntent = new Intent(DriverRegLoginActivity.this, DriverMapActivity.class);//perehod k kartam googleMap posle registracji
+                    //startActivity(driverIntent);//perehod k kartam googleMap posle registracji
+
                 } else {
                     Toast.makeText(CustomerRegLoginActivity.this, "Error", Toast.LENGTH_SHORT).show();
                     loadingBar.dismiss();

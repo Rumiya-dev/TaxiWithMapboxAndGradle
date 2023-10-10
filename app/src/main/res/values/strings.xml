@@ -8,5 +8,6 @@
     <string name="signUp">Sign in</string>
     <string name="driverStatus">Log in for drivers</string>
     <string name="createQuestion">You don`t have account</string>
+    <string name="mapbox_access_token">sk.eyJ1IjoicnVtaWlhIiwiYSI6ImNsbmplZ3dobTF1ZXIycXc1djI4ZWZma2QifQ.1RCEzhw2D6nNCWL3boT65Q</string>
 
 </resources>
