@@ -90,6 +90,7 @@ public class DriverRegLoginActivity extends AppCompatActivity {
                 if (task.isSuccessful()) {
                     Toast.makeText(DriverRegLoginActivity.this, "Login completed successfully", Toast.LENGTH_SHORT).show();
                     loadingBar.dismiss();
+
                 } else {
                     Toast.makeText(DriverRegLoginActivity.this, "Error, try again", Toast.LENGTH_SHORT).show();
                     loadingBar.dismiss();
@@ -110,6 +111,10 @@ public class DriverRegLoginActivity extends AppCompatActivity {
               if (task.isSuccessful()) {
                   Toast.makeText(DriverRegLoginActivity.this, "Registration completed successfully", Toast.LENGTH_SHORT).show();
                   loadingBar.dismiss();
+
+                  //Intent driverIntent = new Intent(DriverRegLoginActivity.this, DriverMapActivity.class);//perehod k kartam googleMap posle registracji
+                  //startActivity(driverIntent);//perehod k kartam googleMap posle registracji
+
               } else {
                   Toast.makeText(DriverRegLoginActivity.this, "Error", Toast.LENGTH_SHORT).show();
                   loadingBar.dismiss();
